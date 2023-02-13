@@ -66,7 +66,7 @@ export default class RegisterPage {
     }
 
     tickOffTermsCheckbox(){
-        this.termsCheckbox().check({force: true});
+        this.termsCheckbox().check();
     }
 
     tickOffNewsletterCheckbox(){

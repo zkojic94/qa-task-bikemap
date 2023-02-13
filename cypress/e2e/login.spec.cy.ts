@@ -8,6 +8,12 @@ const onWelcomePage = new WelcomePage();
 const onNavigation = new Navigation();
 
 describe('login tests', () => {
+
+    let userData = {
+        fullName: "John Doe",
+        email: "johndoe@gmail.com",
+        password: "Test123!"
+    }
    
     beforeEach('visit link', () => {
         cy.visit('/')
@@ -16,11 +22,11 @@ describe('login tests', () => {
 
     it('login with correct credentials', () => {
         onNavigation.clickRegistrationButton();
-        onRegisterPage.enterEmail(testData.loginEmail);
+        onRegisterPage.enterEmail(userData.email);
         onRegisterPage.clickSubmitButton();
-        onRegisterPage.enterPassword(testData.userPassword);
+        onRegisterPage.enterPassword(userData.password);
         onRegisterPage.clickLogInButton();
         cy.wait('@getUserLocation');
-        onWelcomePage.verifyWelcomeTitleIsDisplayed(`${testData.welcomeTitle} ${testData.userFullName}.`);
+        onWelcomePage.verifyWelcomeTitleIsDisplayed(`${testData.welcomeTitle} ${userData.fullName}.`);
     });
 })
