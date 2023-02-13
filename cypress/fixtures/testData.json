@@ -1,0 +1,9 @@
+{
+  "registerEmail": "johndoe6@gmail.com",
+  "loginEmail": "johndoe1@gmail.com",
+  "userFullName": "John Schmit",
+  "userPassword": "Test123!",
+  "premiumFeaturesTitle": "Unlock All Premium Features",
+  "premiumWelcomeUrl": "/en/premium-welcome/",
+  "welcomeTitle": "Welcome back,"
+}
